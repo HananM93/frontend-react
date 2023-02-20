@@ -1,4 +1,4 @@
-import 'bootswatch/dist/journal/bootstrap.min.css';
+import 'bootswatch/dist/solar/bootstrap.min.css';
 import './App.css';
 import Header from './components/Header';
 
