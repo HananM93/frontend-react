@@ -5,9 +5,8 @@ import { Nav, Navbar, Container} from 'react-bootstrap'
 const Header = () => {
   return (
     <div>
-      <Navbar bg="light" expand="lg">
+      <Navbar className="color-nav" variant="dark">
         <Container>
-          
           <Navbar.Brand href="/">MentNotes</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Container, Form } from "react-bootstrap";
+import { Button, Container, Form } from "react-bootstrap";
 const Create = ({setNotes}) => {
   const [form, setForm] = useState({ title: "", text: "" });
 
@@ -10,6 +10,9 @@ const Create = ({setNotes}) => {
     
   }
   
+  function addNote() {
+
+  }
 
   return (
     <Container>
@@ -36,6 +39,7 @@ const Create = ({setNotes}) => {
           />
         </Form.Group>
       </Form>
+      <Button type="button" class="btn btn-primary">Button</Button>
     </Container>
   );
 };
