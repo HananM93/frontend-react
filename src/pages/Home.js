@@ -1,10 +1,12 @@
 import React from 'react'
+import { Container } from 'react-bootstrap'
 
 const Home = () => {
   return (
-    <div>
-      
-    </div>
+    <Container>
+      <h1 className='mt-5'>Notes App</h1>
+      <p>Create a note </p>
+    </Container>
   )
 }
 
