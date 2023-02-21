@@ -14,7 +14,7 @@ const Header = () => {
               
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/notes">Notes</Nav.Link>
-              <Nav.Link href="/create">Create</Nav.Link>
+              <Nav.Link href="/create">Add Note</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -24,3 +24,26 @@ const Header = () => {
 };
 
 export default Header;
+
+// import { Link } from "react-router-dom";
+
+// function Header(props) {
+//   return (
+//     <nav className="nav">
+//       <Link to="/">
+//         <div>Notes App</div>
+//       </Link>
+//       <Link to="/">
+//         <div>Home</div>
+//       </Link>
+//       <Link to="/notes">
+//         <div>Notes</div>
+//       </Link>
+//       <Link to="/create">
+//         <div>Add Notes</div>
+//       </Link>
+//     </nav>
+//   );
+// }
+
+// export default Header;
