@@ -7,11 +7,12 @@ const Create = ({setNotes}) => {
   function handleChange(event) {
     const {value,name} = event.target
     setForm({...form, [name]:value })
-    
   }
   
   function addNote() {
-
+    
+    setNotes(note => [...note,form])
+    setForm({ title: "", text: "" })
   }
 
   return (
@@ -39,7 +40,7 @@ const Create = ({setNotes}) => {
           />
         </Form.Group>
       </Form>
-      <Button type="button" class="btn btn-primary">Button</Button>
+       <Button onClick={addNote} className="button">Add Note</Button>
     </Container>
   );
 };
