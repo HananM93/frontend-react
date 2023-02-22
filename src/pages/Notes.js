@@ -2,6 +2,7 @@
 // import { Card, Container } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router";
 import { useState } from "react";
+import List from "./List";
 
 const Notes = ({ notes, updateNotes, deleteNotes }) => {
   const { id } = useParams();
@@ -19,18 +20,21 @@ const Notes = ({ notes, updateNotes, deleteNotes }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     updateNotes(editForm, id);
-    navigate("/");
+    navigate("/notes");
   };
 
   const removeNote = () => {
     deleteNotes(id);
-    navigate("/");
+    navigate("/notes");
   };
   return (
     <div >
+      <List />
       <h1>{note.title}</h1>
       <h2>{note.body}</h2>
-      <button id="DELETE" onClick={removeNote}>
+   
+     
+       <button id="DELETE" onClick={removeNote}>
         Delete
       </button>
       <form onSubmit={handleSubmit}>
@@ -49,9 +53,10 @@ const Notes = ({ notes, updateNotes, deleteNotes }) => {
           onChange={handleChange}
         />
         <input type="submit" value="Update"/>
-      </form>
+      </form> 
     </div>
   )
 }
 
 export default Notes
+

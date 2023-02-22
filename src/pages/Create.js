@@ -56,25 +56,7 @@ const Create = ({notes, createNotes}) => {
     </Form>
   <button >Add Note</button>
 {notes ? loaded() : loading()} 
-{/*      
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="title"
-          placeholder="title"
-          value={form.title}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="body"
-          placeholder="body"
-          value={form.body}
-          onChange={handleChange}
-        />
-        <input type="submit" value="Add Note"/>
-        </form>
-        {notes ? loaded() : loading()} */}
+
       </Container>
   )
 }
