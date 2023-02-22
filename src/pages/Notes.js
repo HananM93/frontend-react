@@ -2,7 +2,6 @@
 // import { Card, Container } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router";
 import { useState } from "react";
-// import List from "./List";
 
 const Notes = ({ notes, updateNotes, deleteNotes }) => {
   const { id } = useParams();
@@ -20,12 +19,12 @@ const Notes = ({ notes, updateNotes, deleteNotes }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     updateNotes(editForm, id);
-    navigate("/");
+    navigate("/create");
   };
 
   const removeNote = () => {
     deleteNotes(id);
-    navigate("/");
+    navigate("/create");
   };
   return (
     <div >

@@ -5,7 +5,7 @@ import { Nav, Navbar, Container} from 'react-bootstrap'
 const Header = () => {
   return (
     <div>
-      <Navbar className="color-nav" variant="dark">
+      <Navbar style={{backgroundColor: "rgb(173, 137, 38)"}}>
         <Container>
           <Navbar.Brand href="/">MentNotes</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -25,25 +25,5 @@ const Header = () => {
 
 export default Header;
 
-// import { Link } from "react-router-dom";
 
-// function Header(props) {
-//   return (
-//     <nav className="nav">
-//       <Link to="/">
-//         <div>Notes App</div>
-//       </Link>
-//       <Link to="/">
-//         <div>Home</div>
-//       </Link>
-//       <Link to="/notes">
-//         <div>Notes</div>
-//       </Link>
-//       <Link to="/create">
-//         <div>Add Notes</div>
-//       </Link>
-//     </nav>
-//   );
-// }
 
-// export default Header;
