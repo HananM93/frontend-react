@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Create from "../pages/Create";
 import Notes from "../pages/Notes";
 import Home from "../pages/Home";
-import List from '../pages/List'
+
 
 
 const Main = () => {
@@ -54,9 +54,7 @@ const Main = () => {
             <Route
             path="/"element={<Home/>} 
             />
-              <Route
-            path="/notes"element={<List/>} 
-            />
+           
             <Route
               path="/create"
               element={<Create notes={notes} createNotes={createNotes} />}
