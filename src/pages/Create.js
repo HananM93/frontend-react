@@ -2,8 +2,7 @@
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Container } from "react-bootstrap";
-
+import { Container , Form } from "react-bootstrap";
 const Create = ({notes, createNotes}) => {
   const [form, setForm] = useState({
     title: "",
@@ -43,7 +42,21 @@ const Create = ({notes, createNotes}) => {
 
 
   return (
+    
     <Container>
+      <Form onSubmit={handleSubmit} className="mb-3" style={{width: "60%"}}>
+      <Form.Group >
+        <Form.Label>Title</Form.Label>
+        <Form.Control onChange={handleChange} type='text' name="title" placeholder="title" value={form.title} />
+      </Form.Group>
+      <Form.Group >
+        <Form.Label>Note</Form.Label>
+        <Form.Control onChange={handleChange} type='text' name="body" placeholder="body" value={form.body} as="textarea" rows={3} />
+      </Form.Group>
+    </Form>
+  <button >Add Note</button>
+{notes ? loaded() : loading()} 
+{/*      
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -61,7 +74,7 @@ const Create = ({notes, createNotes}) => {
         />
         <input type="submit" value="Add Note"/>
         </form>
-        {notes ? loaded() : loading()}
+        {notes ? loaded() : loading()} */}
       </Container>
   )
 }

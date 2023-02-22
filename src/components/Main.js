@@ -1,9 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Create from "../pages/Create";
-import Home from "../pages/Home";
 import Notes from "../pages/Notes";
-
+import Home from "../pages/Home";
 
 
 const Main = () => {
@@ -56,7 +55,7 @@ const Main = () => {
             />
              
             <Route
-              path="/notes"
+              path="/create"
               element={<Create notes={notes} createNotes={createNotes} />}
             />
             

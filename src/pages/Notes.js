@@ -19,15 +19,15 @@ const Notes = ({ notes, updateNotes, deleteNotes }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     updateNotes(editForm, id);
-    navigate("/notes");
+    navigate("/");
   };
 
   const removeNote = () => {
     deleteNotes(id);
-    navigate("/notes");
+    navigate("/");
   };
   return (
-    <div>
+    <div >
       <h1>{note.title}</h1>
       <h2>{note.body}</h2>
       <button id="DELETE" onClick={removeNote}>
