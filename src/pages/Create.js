@@ -44,21 +44,8 @@ const Create = ({notes, createNotes}) => {
   return (
     
     <Container>
-       {/* <Form onSubmit={handleSubmit} className="mb-3" style={{width: "60%"}}>
-      <Form.Group >
-        <Form.Label>Title</Form.Label>
-        <Form.Control onChange={handleChange} type='text' name="title" placeholder="title" value={form.title} />
-      </Form.Group>
-      <Form.Group >
-        <Form.Label>Note</Form.Label>
-        <Form.Control onChange={handleChange} type='text' name="body" placeholder="body" value={form.body} as="textarea" rows={3} />
-      </Form.Group>
-    </Form> 
-   <input type="submit" value="Add Note"/> 
-    */}
-  
-     
-      <form className="mb-4" style={{width: "4%"}} onSubmit={handleSubmit}>
+   
+      <form className='mt-5' onSubmit={handleSubmit}>
         <input 
           type="text"
           name="title"
@@ -74,7 +61,7 @@ const Create = ({notes, createNotes}) => {
           onChange={handleChange}
           
         />
-        <input type="submit" value="Add Note"/>
+        <input style={{backgroundColor: "rgb(173, 137, 38)"}} type="submit" value="Add Note"/>
         </form>
         {notes ? loaded() : loading()} 
       </Container>

@@ -2,6 +2,7 @@
 // import { Card, Container } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router";
 import { useState } from "react";
+import { Container } from "react-bootstrap";
 
 const Notes = ({ notes, updateNotes, deleteNotes }) => {
   const { id } = useParams();
@@ -27,7 +28,7 @@ const Notes = ({ notes, updateNotes, deleteNotes }) => {
     navigate("/create");
   };
   return (
-    <div >
+    <Container >
      
       <h1>{note.title}</h1>
       <h2>{note.body}</h2>
@@ -46,12 +47,12 @@ const Notes = ({ notes, updateNotes, deleteNotes }) => {
           value={editForm.body}
           onChange={handleChange}
         />
-        <input type="submit" value="Update"/>
-        <button id="DELETE" onClick={removeNote}>
+        <input style={{backgroundColor: "rgb(173, 137, 38)"}} type="submit" value="Update"/>
+        <button style={{backgroundColor: "rgb(173, 137, 38)"}} id="DELETE" onClick={removeNote}>
         Delete
       </button>
       </form> 
-    </div>
+    </Container>
   )
 }
 
